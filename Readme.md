@@ -1,7 +1,8 @@
 # Личный проект «Девайс»
 
 * Студент: [ульяна балесная](https://up.htmlacademy.ru/htmlcss-individual/1/user/1919993).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей
+Остаповец](https://htmlacademy.ru/profile/id288419).
 
 ---
 
