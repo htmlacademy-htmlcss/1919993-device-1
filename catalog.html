@@ -6,19 +6,12 @@
     <title>Каталог</title>
   </head>
 
-  <body>
-    <!DOCTYPE html>
-    <html lang="ru">
-
-      <head>
-        <meta charset="utf-8">
-        <title>HTML Academy: Девайс Каталог</title>
-      </head>
-
       <body>
         <header class="page-header">
           <div class="logo">
-            <img src="img/logo.svg" alt="HTML Academy" width="145" height="36">
+            <a href="#">
+              <img src="img/logo.svg" alt="HTML Academy" width="145" height="36">
+            </a>
           </div>
 
           <form class="search-form" action="https://echo.htmlacademy.ru/." method="post">
@@ -26,20 +19,24 @@
             <button type="submit">Найти</button>
           </form>
 
-          <div>
+          <div class="navigation">
             <nav class="main-nav">
               <ul class="main-nav-list">
-                <li>
+                <li class="navigation-item">
                   <div><img class="account" src="img/icons.svg" alt="account" width="15" height="12"></div>
-                  <a class="navigation-link" href="#">Войти</a>
+                  <a class="navigation-link" href="#">Коля Петухов</a>
                 </li>
 
-                <li>
+                <li class="navigation-item">
+                  <a class="navigation-link" href="#">Выйти</a>
+                </li>
+
+                <li class="navigation-item">
                   <div><img class="contrast" src="img/icons3.svg" alt="contrast" width="10" height="12"></div>
                   <a class="navigation-link" href="#">Сравнить</a>
                 </li>
 
-                <li>
+                <li class="navigation-item">
                   <span>2</span>
                   <div><img class="cart" src="img/icons2.svg" alt="cart" width="16" height="14"></div>
                   <a class="navigation-link" href="catalog.html">Корзина</a>
@@ -47,19 +44,19 @@
               </ul>
 
               <ul class="main-nav-list">
-                <li>
+                <li class="navigation-list-item">
                   <a class="navigation-link" href="#">Каталог товаров</a>
                 </li>
 
-                <li>
+                <li class="navigation-list-item">
                   <a class="navigation-link" href="#">Доставка</a>
                 </li>
 
-                <li>
+                <li class="navigation-list-item">
                   <a class="navigation-link" href="#">Гарантия</a>
                 </li>
 
-                <li>
+                <li class="navigation-list-item">
                   <a class="navigation-link" href="#">Контакты</a>
                 </li>
               </ul>
