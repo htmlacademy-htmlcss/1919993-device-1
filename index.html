@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
 
   <body>
@@ -35,36 +36,36 @@
             <li class="navigation-item">
               <span>2</span>
               <div><img class="cart" src="img/icons2.svg" alt="cart" width="16" height="14"></div>
-              <a class="navigation-link" href="catalog.html">Корзина</a>
+              <a class="navigation-link" href="#">Корзина</a>
             </li>
           </ul>
 
           <ul class="main-nav-list">
             <li class="navigation-list-item">
-              <a class="navigation-link" href="#">Каталог товаров</a>
+              <a class="navigation-link-list" href="catalog.html">Каталог товаров</a>
             </li>
 
             <li class="navigation-list-item">
-              <a class="navigation-link" href="#">Доставка</a>
+              <a class="navigation-link-list" href="#">Доставка</a>
             </li>
 
             <li class="navigation-list-item">
-              <a class="navigation-link" href="#">Гарантия</a>
+              <a class="navigation-link-list" href="#">Гарантия</a>
             </li>
 
             <li class="navigation-list-item">
-              <a class="navigation-link" href="#">Контакты</a>
+              <a class="navigation-link-list" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
-        <p>01</p>
+        <span class="one">01</span>
       </div>
     </header>
 
     <main>
       <section class="slider">
 
-        <article class="slider-item">
+        <article class="slider-about">
           <div class="slider-photo">
             <img src="img/slider-1.png" alt="quadrocopter" width="560" height="560">
           </div>
@@ -80,7 +81,7 @@
           </div>
 
           <div class="else">
-            <span class="text"><a href="#">Подробнее</a></span>
+            <span><a href="#">Подробнее</a></span>
           </div>
 
           <dl class="slider-info">
@@ -140,7 +141,7 @@
 
       <section class="delivery">
         <ul class="catalog-list">
-          <li claass="catalog-item"><a class="catalog-link" href="#">Доставка</a></li>
+          <li class="catalog-item"><a class="catalog-link catalog-active" href="#">Доставка</a></li>
           <li class="catalog-item"><a class="catalog-link" href="#">Гарантия</a></li>
           <li class="catalog-item"><a class="catalog-link" href="#">Кредит</a></li>
         </ul>
@@ -160,8 +161,8 @@
             </div>
           </li>
         </ul>
-        <div>
-          <div>
+        <div class="delivery-text">
+          <div class="delivery-car">
             <img src="img/car.svg" alt="delivery" width="47" height="31">
           </div>
           <p>Доставим редкий товар под заказ</p>
@@ -219,36 +220,38 @@
 
         <div class="free">
           <img src="img/tick-big 1.svg" alt="submit" width="16" height="16">
-          Это бесплатно
+          <span>Это бесплатно</span>
         </div>
 
       </section>
 
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="footer-logo">
         <img src="img/icon-yellow.svg" alt="HTML Academy" width="145" height="36">
       </div>
 
-      <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+      <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
 
       <ul class="footer-list">
         <li class="footer-list-item"><a href="#">Доставка</a></li>
         <li class="footer-list-item"><a href="#">Гарантия</a></li>
         <li class="footer-list-item"><a href="#">Контакты</a></li>
       </ul>
-      <a href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+      <a class="footer-tel" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
 
       <ul class="social-items">
         <li class="social-list-item">
-          <a href="#"><img src="img/telegram.svg" alt="telegram" width="40" height="40"></a>
+          <a href="https://t.me/htmlacademy"><img src="img/telegram.svg" alt="telegram" width="40" height="40"></a>
         </li>
         <li class="social-list-item">
-          <a href="#"><img src="img/youtube.svg" alt="youtube" width="40" height="40"></a>
+          <a href="https://www.youtube.com/user/htmlacademyru"><img src="img/youtube.svg" alt="youtube" width="40"
+              height="40"></a>
         </li>
         <li class="social-list-item">
-          <a href="#"><img src="img/twitter.svg" alt="twitter" width="40" height="40"></a>
+          <a href="https://twitter.com/htmlacademy_ru"><img src="img/twitter.svg" alt="twitter" width="40"
+              height="40"></a>
         </li>
       </ul>
 

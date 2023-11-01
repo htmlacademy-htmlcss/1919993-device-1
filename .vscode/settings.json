@@ -18,6 +18,7 @@
   "css.lint.universalSelector": "warning",
   "css.lint.unknownVendorSpecificProperties": "warning",
   "css.lint.zeroUnits": "error",
+  "css.validate": false,
   "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
   "liveServer.settings.port": 5501
