@@ -19,6 +19,11 @@
   "css.lint.unknownVendorSpecificProperties": "warning",
   "css.lint.zeroUnits": "error",
   "css.validate": false,
+  "stylelint.enable": true,
+  "stylelint.validate": [ "css", "scss", "postcss" ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
   "html.format.endWithNewline": true,
   "html.format.indentInnerHtml": true,
   "liveServer.settings.port": 5501
