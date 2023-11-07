@@ -10,14 +10,15 @@
 
   <body>
     <header class="page-header">
-      <div class="logo">
-        <a href="#">
-          <img src="img/logo.svg" alt="HTML Academy" width="145" height="36">
-        </a>
-      </div>
+
+      <a class="logo" href="#">
+        <img src="img/logo.svg" alt="HTML Academy" width="145" height="36">
+      </a>
+
 
       <form class="search-form" action="https://echo.htmlacademy.ru/." method="post">
         <input class="search" type="text" placeholder="Поиск по сайту">
+        <label class="visually-hidden" for="search">Поиск по сайту</label>
         <button type="submit">Найти</button>
       </form>
 
@@ -25,75 +26,72 @@
         <nav class="main-nav">
           <ul class="main-nav-list">
             <li class="navigation-item">
-              <div><img class="account" src="img/icons.svg" alt="account" width="15" height="12"></div>
+              <div><img class="account" src="img/account.svg" alt="account" width="15" height="12"></div>
               <a class="navigation-link" href="#">Войти</a>
             </li>
 
+
             <li class="navigation-item">
-              <div><img class="contrast" src="img/icons3.svg" alt="contrast" width="10" height="12"></div>
+              <div><img class="contrast" src="img/contrast.svg" alt="contrast" width="10" height="12"></div>
               <a class="navigation-link" href="#">Сравнить</a>
             </li>
 
             <li class="navigation-item">
               <span>2</span>
-              <div><img class="cart" src="img/icons2.svg" alt="cart" width="16" height="14"></div>
+              <div><img class="cart" src="img/trash.svg" alt="cart" width="16" height="14"></div>
               <a class="navigation-link" href="#">Корзина</a>
             </li>
-          </ul>
 
-          <ul class="main-nav-list">
-            <li class="navigation-list-item">
-              <a class="navigation-link-list" href="catalog.html">Каталог товаров</a>
-            </li>
+            <ul class="main-nav-list">
+              <li class="navigation-list-item">
+                <a class="navigation-link-list" href="catalog.html">Каталог товаров</a>
+              </li>
 
-            <li class="navigation-list-item">
-              <a class="navigation-link-list" href="#">Доставка</a>
-            </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link-list" href="#">Доставка</a>
+              </li>
 
-            <li class="navigation-list-item">
-              <a class="navigation-link-list" href="#">Гарантия</a>
-            </li>
+              <li class="navigation-list-item">
+                <a class="navigation-link-list" href="#">Гарантия</a>
+              </li>
 
-            <li class="navigation-list-item">
-              <a class="navigation-link-list" href="#">Контакты</a>
-            </li>
-          </ul>
+              <li class="navigation-list-item">
+                <a class="navigation-link-list" href="#">Контакты</a>
+              </li>
+            </ul>
         </nav>
-        <span class="one">01</span>
       </div>
     </header>
 
     <main>
       <section class="slider">
+        <div class="slider-photo">
+          <img src="img/slider-1.png" alt="quadrocopter" width="560" height="560">
+        </div>
+        <div class="slider-text">
+          <h2>
+            Порхает как бабочка,
+            жалит как пчела!
+          </h2>
+          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
+            камеру.
+          </p>
+        </div>
 
-        <article class="slider-about">
-          <div class="slider-photo">
-            <img src="img/slider-1.png" alt="quadrocopter" width="560" height="560">
-          </div>
+        <div class="else">
+          <span><a href="#">Подробнее</a></span>
+        </div>
 
-          <div class="slider-text">
-            <h2>
-              Порхает как бабочка,
-              жалит как пчела!
-            </h2>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
-              камеру.
-            </p>
-          </div>
+        <dl class="slider-info">
+          <dt class="distance">800 м</dt>
+          <dd class="distance-info">Дальность полета</dd>
+          <dt class="distance"> 50м</dt>
+          <dd class="distance-info">Радиус поражения</dd>
+        </dl>
 
-          <div class="else">
-            <span><a href="#">Подробнее</a></span>
-          </div>
+      </section>
 
-          <dl class="slider-info">
-            <dt class="distance">800 м</dt>
-            <dd class="distance-info">Дальность полета</dd>
-            <dt class="distance"> 50м</dt>
-            <dd class="distance-info">Радиус поражения</dd>
-          </dl>
-
-        </article>
-
+      <section class="slider-catalog">
         <ul class="slider-list">
           <li class="slider-item">
             <a class="slider-link" href="#">
@@ -162,6 +160,9 @@
             </div>
           </li>
         </ul>
+      </section>
+
+      <section class="delivery-info">
         <div class="delivery-text">
           <div class="delivery-car">
             <img src="img/car.svg" alt="delivery" width="47" height="31">
@@ -171,61 +172,65 @@
             <img src="img/info.svg" alt="info" width="40" height="40">
           </div>
         </div>
+
+
+        <div class="contacts">
+          <article class="about">
+            <h2>О нас</h2>
+            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+
+            <ul class="about-list">
+              <li class="about-item">Меловые линии</li>
+              <li class="about-item">СДИК</li>
+              <li class="about-item">ТоксБерри</li>
+            </ul>
+
+            <span class="text"><a href="#">Подробнее о нас</a></span>
+          </article>
+
+          <article class="contacts-info">
+            <h2>Контакты</h2>
+            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
+
+            <div class="contacts-info-item">
+              <h3>Интернет-магазин «Девайс»</h3>
+              <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+              <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+            </div>
+
+
+            <ul class="contacts-schedule">
+              <h3 class="contacts-subtitle">Время работы</h3>
+              <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
+              <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
+            </ul>
+            <span class="text"><a href="#">Напишите нам</a></span>
+
+          </article>
+        </div>
       </section>
 
-      <div class="contacts">
-        <article class="about">
-          <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
-
-          <ul class="about-list">
-            <li class="about-item">Меловые линии</li>
-            <li class="about-item">СДИК</li>
-            <li class="about-item">ТоксБерри</li>
-          </ul>
-
-          <span class="text"><a href="#">Подробнее о нас</a></span>
-        </article>
-
-        <article class="contacts-info">
-          <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
-
-          <div class="contacts-info-item">
-            <h3>Интернет-магазин «Девайс»</h3>
-            <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-            <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </div>
-
-
-          <ul class="contacts-schedule">
-            <h3 class="contacts-subtitle">Время работы</h3>
-            <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
-            <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
-          </ul>
-          <span class="text"><a href="#">Напишите нам</a></span>
-
-        </article>
-      </div>
-
-      <section class="subscribe">
-        <h2>Подпишитесь на рассылку</h2>
-        <p>Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
-          спецпредложения и вот это вот всё.</p>
-
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/." method="post">
-          <input type="text" placeholder="Ваш e-mail">
-          <button type="submit">Подписаться</button>
-        </form>
-
-        <div class="free">
-          <img src="img/tick-big 1.svg" alt="submit" width="16" height="16">
-          <span>Это бесплатно</span>
+      <section>
+        <div class="subscribe">
+          <h2>Подпишитесь на рассылку</h2>
+          <p>Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции,
+            спецпредложения и вот это вот всё.</p>
         </div>
 
-      </section>
+        <div class="subscribe-form-wrapper">
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/." method="post">
+            <input type="text" placeholder="Ваш e-mail">
+            <button type="submit">Подписаться</button>
+          </form>
 
+          <div class="free">
+            <img src="img/tick-big 1.svg" alt="submit" width="16" height="16">
+            <span>Это бесплатно</span>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
