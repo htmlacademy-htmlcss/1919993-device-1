@@ -23,14 +23,15 @@
 
       <div class="navigation">
         <nav class="main-nav">
-          <ul class="main-nav-list">
+
+          <ul class="main-nav-list-navigation">
             <li class="navigation-item">
               <div><img class="account" src="img/account.svg" alt="account" width="15" height="12"></div>
               <a class="navigation-link" href="#">Коля Петухов</a>
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link-out" href="#">Выйти</a>
+              <a class="navigation-link" href="#">Выйти</a>
             </li>
 
             <li class="navigation-item">
@@ -44,6 +45,8 @@
               <a class="navigation-link" href="#">Корзина</a>
             </li>
           </ul>
+
+
 
           <ul class="main-nav-list">
             <li class="navigation-list-item">
@@ -62,8 +65,9 @@
               <a class="navigation-link-list" href="#">Контакты</a>
             </li>
           </ul>
+        </div>
         </nav>
-      </div>
+
     </header>
 
     <main>
@@ -72,11 +76,12 @@
         <ul class="selfie-list">
           <li class="selfie-item"><a href="#">Главная</a></li>
           <li class="selfie-item"><a href="#">Каталог товаров</a></li>
-          <li class="selfie-item"><a href="#">Моноподы для селфи</a></li>
+          <li class="selfie-item">Моноподы для селфи</li>
         </ul>
       </section>
 
-      <section clas="selfie-filters">
+
+      <div clas="selfie-filters">
         <span class="filters">фильтр:</span>
         <form class="filters-form" action="https://echo.htmlacademy.ru/." method="post">
           <fieldset class="price">
@@ -87,29 +92,30 @@
 
           <fieldset class="color">
             <legend>Цвет</legend>
-            <input type="checkbox" name="subscribe" id="subscribe-field" checked>
             <label for="subscribe-field">Черный</label>
-
             <input type="checkbox" name="subscribe" id="subscribe-field" checked>
+
             <label for="subscribe-field">Белый</label>
+            <input type="checkbox" name="subscribe" checked>
 
-            <input type="checkbox" name="subscribe" id="subscribe-field" checked>
             <label for="subscribe-field">Синий</label>
+            <input type="checkbox" name="subscribe" checked>
 
-            <input type="checkbox" name="subscribe" id="subscribe-field" checked>
             <label for="subscribe-field">Красный</label>
+            <input type="checkbox" name="subscribe" checked>
 
-            <input type="checkbox" name="subscribe" id="subscribe-field" checked>
             <label for="subscribe-field">Розовый</label>
+            <input type="checkbox" name="subscribe" checked>
+
           </fieldset>
 
           <fieldset class="bluetooth">
             <legend>Bluetooth</legend>
-            <label>
+            <label class="radio-button">
               <input type="radio" name="question-one" value="Есть"> Есть
             </label>
             <br>
-            <label>
+            <label class="radio-button">
               <input type="radio" name="question-one" value="Нет" checked>
               Нет
             </label>
@@ -119,7 +125,7 @@
 
         </form>
 
-      </section>
+      </div>
       <section class="selfie-catalog">
         <ul class="filters">
           <li class="sorting"><a href="#">сортировка:</a></li>
@@ -137,24 +143,24 @@
 
 
         <article class="selfie-catalog-item">
-          <div class="selfie-1">
+          <div class="selfies">
             <img src="img/product-1.jpg" alt="selfie-photo-1" width="360" height="360">
             <p>Любительская
               селфи-палка</p>
             <span class="selfie-price">500 ₽</span>
           </div>
-          <div class="selfie-2">
+          <div class="selfies">
             <img src="img/product-2.jpg" alt="selfie-photo-2" width="360" height="360">
             <p>Профессиональная селфи-палка </p>
             <span class="selfie-price">1 500 ₽</span>
           </div>
-          <div class="selfie-3">
+          <div class="selfies">
             <img src="img/product-3.jpg" alt="selfie-photo-3" width="360" height="360">
             <p>Непотопляемая
               селфи-палка</p>
             <span class="selfie-price">2 500 ₽</span>
           </div>
-          <div class="selfie-4">
+          <div class="selfies">
             <img src="img/product-4.jpg" alt="selfie-photo-4" width="360" height="360">
             <p>Селфи-палка «Следуй за мной»</p>
             <span class="selfie-price">1 500 ₽</span>
@@ -167,12 +173,12 @@
 
         <ol class="pagination">
           <li class="pagination-item pagination-item-back"><a href="#">Назад</a></li>
-          <li class="pagination-item"><a href="#">1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">...</a></li>
-          <li class="pagination-item"><a href="#">15</a></li>
-          <li class="pagination-item pagination-item-next"><a href="#">Вперёд</a></li>
+          <li class="pagination-item">1</li>
+          <li class="pagination-item">2</li>
+          <li class="pagination-item">3</li>
+          <li class="pagination-item">...</li>
+          <li class="pagination-item">15</li>
+          <li class="pagination-item pagination-item-next">Вперёд</li>
         </ol>
       </section>
     </main>
