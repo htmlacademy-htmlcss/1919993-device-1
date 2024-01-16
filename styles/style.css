@@ -49,16 +49,27 @@ body {
   outline-offset: -2px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-header {
-  background: #FFE17F;
-  margin-top: 40px;
-  height: 150px;
+  background-image: linear-gradient(to bottom, #ffffff 60px, #ffffff 60px, #FFE17F 60px, #FFE17F 151px);
+  min-height: 150px;
+  padding-bottom: 35px;
 }
 
 .logo {
   display: block;
-  margin-top: -20px;
   margin-left: 60px;
+  margin-top: 40px;
 }
 
 .main-nav {
@@ -163,29 +174,16 @@ body {
   flex-grow: 1;
 
 }
-
-.slider-nav {
-  width: 560px;
+.slide-slider {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: auto;
-  margin-top: -28px;
-
 }
 
-.slider-photo {
-  background-color: #FFE17F;
-  width: 1160px;
-  height: 150px;
-
+.slider-photo{
+  position: relative;
+  top: -35px;
 }
 
-.slider-photo img {
-  margin-top: -165px;
-}
-
-.slider-photo::before {
+.slide-slider::before {
   content: "01";
   color: #FFFFFF;
   text-align: right;
@@ -194,14 +192,34 @@ body {
   font-weight: 700;
   display: flex;
   width: 250px;
-  height: 135px;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
   margin-left: auto;
   margin-right: 49px;
-  padding-top: 30px;
+  padding-top: 46px;
+  position: absolute;
+  right: 379px;
 }
+
+.slider-nav {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+  justify-content: flex-end;
+  margin-bottom: 82px;
+  position: relative;
+}
+
+
+.slider-container {
+  background-image: linear-gradient(to bottom, #FFE17F 115px, #FFE17F 115px, #ffffff 115px, #ffffff 410px);
+
+}
+
+
 
 .slider-text h2 {
   margin: 0;
@@ -378,8 +396,8 @@ body {
 }
 
 .slides-text p {
-  color: #444;
-  font-family: Rubik;
+  color:#444;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -400,7 +418,6 @@ body {
 .controls-link {
   color: #000000;
   text-align: center;
-  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -413,8 +430,6 @@ body {
 
 .catalog-active {
   color: #FFE17F;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -428,7 +443,6 @@ body {
 
 
 .delivery-info h2 {
-  font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
@@ -444,7 +458,7 @@ body {
   display: flex;
   width: 1160px;
   margin-top: 70px;
-  ;
+
 
 
 }
@@ -454,7 +468,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 1035px;
-  background: var(--basic-light, #F0F0F0);
+  background: #F0F0F0;
 }
 
 .delivery-car {
@@ -474,12 +488,12 @@ body {
   height: 100px;
   gap: 10px;
   background: var(--basic-light, #F0F0F0);
-  ;
+
 }
 
 .delivery-infomation-img {
   background-color: rgba(220, 220, 220, 0.50);
-  ;
+
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -884,14 +898,14 @@ body {
   margin-bottom: 20px;
 }
 
-.color {
+.filters-form-fieldset-color {
   width: 200px;
   height: 220px;
   flex-shrink: 0;
   margin-bottom: 35px;
 }
 
-.color legend {
+.filters-form-fieldset-color legend {
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.36px;
@@ -905,7 +919,7 @@ body {
   margin: 0;
 }
 
-.color label {
+.filters-form-fieldset-color label {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
@@ -913,7 +927,7 @@ body {
   margin: 0;
 }
 
-.bluetooth {
+.filters-form-fieldset-bluetooth {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -921,7 +935,7 @@ body {
   height: 112px;
 }
 
-.bluetooth legend {
+.filters-form-fieldset-bluetooth legend {
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -931,7 +945,7 @@ body {
 }
 
 
-.bluetooth input {
+.filters-form-fieldset-bluetooth input {
   font-size: 16px;
   line-height: 20px;
 }
@@ -990,8 +1004,8 @@ body {
 
 .selfie-catalog-container {
   background-color: #FFFFFF;
-padding-bottom: 20px;
-width: 840px;
+  padding-bottom: 20px;
+  width: 840px;
 }
 
 .selfie-catalog-item p {
@@ -1029,7 +1043,7 @@ width: 840px;
   row-gap: 44px;
 }
 
-.selfie-info {
+.product-info {
   display: flex;
   width: 360px;
   justify-content: space-between;
@@ -1071,7 +1085,7 @@ width: 840px;
   justify-content: space-between;
 }
 
-.page{
+.page {
   display: flex;
   align-items: center;
 }
