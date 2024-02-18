@@ -53,8 +53,8 @@
             <li class="navigation-item">
               <a class="navigation-link " href="#">
 
-                <span>
-                  <span>2</span>
+                <span class="cart-count">
+                  <span class="count">2</span>
                   <img class="cart" src="img/trash.svg" alt="cart" width="16" height="14">
                 </span>
                 <span>Корзина</span>
@@ -88,40 +88,50 @@
     <main class="main-container">
       <section class="slider-container container">
         <div class="slide-slider">
-        <div class="slider-photo">
-          <img src="img/slider-1.png" alt="quadrocopter" width="560" height="560">
-        </div>
-
-        <div class="slider-nav">
-          <div class="slider-text">
-            <h2>
-              Порхает как бабочка,
-              жалит как пчела!
-            </h2>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
-              камеру.
-            </p>
-
-            <div class="slide-button">
-              <a href="#">Подробнее</a>
-            </div>
-
+          <div class="slider-photo">
+            <img src="img/slider-1.png" alt="quadrocopter" width="560" height="560">
           </div>
 
+          <div class="slider-nav">
+            <div class="slider-text">
+              <h2>
+                Порхает как бабочка,
+                жалит как пчела!
+              </h2>
+              <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
+                камеру.
+              </p>
+
+              <div class="slide-button">
+                <a href="#">Подробнее</a>
+              </div>
+
+            </div>
 
 
-          <dl class="slider-info">
-            <div class="slider-info-text">
-              <dt class="distance">800 м</dt>
-              <dd class="distance-info">Дальность полета</dd>
-            </div>
-            <div class="slider-info-text">
-              <dt class="distance"> 50 м</dt>
-              <dd class="distance-info">Радиус поражения</dd>
-            </div>
-          </dl>
+
+            <dl class="slider-info">
+              <div class="slider-info-text">
+                <dt class="distance">800 м</dt>
+                <dd class="distance-info">Дальность полета</dd>
+              </div>
+              <div class="slider-info-text">
+                <dt class="distance"> 50 м</dt>
+                <dd class="distance-info">Радиус поражения</dd>
+              </div>
+            </dl>
+          </div>
         </div>
-      </div>
+
+
+          <ul class="sliders-orders">
+            <li class="slide-order-active"></li>
+            <li class="slide-order"></li>
+            <li class="slide-order"></li>
+          </ul>
+
+  
+
       </section>
 
       <section class="slider-catalog">
@@ -185,23 +195,25 @@
 
       <section class="slider">
         <article class="slide-container container">
-          <ul class="slides-controls ">
-            <li class="controls-item controls-active">
-              <a class="controls-link catalog-active" href="#">
-                Доставка
-              </a>
-            </li>
-            <li class="controls-item">
-              <a class="controls-link guarantee" href="#">
-                Гарантия
-              </a>
-            </li>
-            <li class="controls-item ">
-              <a class="controls-link credit" href="#">
-                Кредит
-              </a>
-            </li>
-          </ul>
+          <div class="container-slides">
+            <ul class="slides-controls ">
+              <li class="controls-active">
+                <a class="controls-link catalog-active" href="#">
+                  Доставка
+                </a>
+              </li>
+              <li class="controls-item">
+                <a class="controls-link" href="#">
+                  <span class="controls-span"> Гарантия</span>
+                </a>
+              </li>
+              <li class="controls-item ">
+                <a class="controls-link" href="#">
+                  <span class="controls-span"> Кредит</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div class="slide slide-active">
             <div class="slides-text">
@@ -276,7 +288,7 @@
               <li class="about-item"><span>ТоксБерри</span></li>
             </ul>
 
-            <span class="text"><a href="#">Подробнее о нас</a></span>
+            <span class="text about-us"><a href="#">Подробнее о нас</a></span>
           </article>
 
           <article class="contacts-info">
@@ -297,7 +309,7 @@
                 <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
               </ul>
             </div>
-            <span class="text"><a href="#">Напишите нам</a></span>
+            <span class="text contact-us"><a href="#">Напишите нам</a></span>
 
           </article>
         </div>

@@ -34,7 +34,7 @@
               </a>
             </li>
 
-            <li class="navigation-item">
+            <li class="navigation-item account-out">
               <a class="navigation-link " href="#">Выйти</a>
             </li>
           </ul>
@@ -42,17 +42,20 @@
           <ul class="nav-list-navigation-shopping">
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <div><img class="contrast" src="img/contrast.svg" alt="contrast" width="10" height="12"></div>
-                Сравнить
+
+              <a class="navigation-link navigation-link-shopping" href="#">
+                <div>
+                  <img class="contrast" src="img/contrast.svg" alt="contrast" width="10" height="12">
+                </div>
+                <span>Сравнить</span>
               </a>
             </li>
 
             <li class="navigation-item">
               <a class="navigation-link " href="#">
 
-                <span>
-                  <span>2</span>
+                <span class="cart-count">
+                  <span class="count">2</span>
                   <img class="cart" src="img/trash.svg" alt="cart" width="16" height="14">
                 </span>
                 <span>Корзина</span>
@@ -95,42 +98,46 @@
           <div class="selfie-filters ">
             <span class="filters">фильтр:</span>
             <form class="filters-form" action="https://echo.htmlacademy.ru/." method="post">
-              <fieldset class="price">
-                <legend for="dayscount">Стоимость</legend>
-                от 0 <input type="text" id="dayscount" name="dayscount" min="0" max="5000" step="1"> до 5000
-              </fieldset>
+              <div class="price-container">
+                <fieldset class="price">
+                  <legend for="dayscount">Стоимость</legend>
+                  от 0 <input type="text" id="dayscount" name="dayscount" min="0" max="5000" step="1"> до 5000
+                </fieldset>
+              </div>
 
+              <div class="color-container">
+                <fieldset class="filters-form-fieldset-color">
+                  <legend>Цвет</legend>
+                  <div class="checkboxes">
+                    <label for="subscribe-field">
+                      <input type="checkbox" name="black" checked>
+                      <span>Черный</span>
+                    </label>
 
-              <fieldset class="filters-form-fieldset-color">
-                <legend>Цвет</legend>
-                <div class="checkboxes">
-                  <label for="subscribe-field">
-                    <input type="checkbox" name="black" checked>
-                    <span>Черный</span>
-                  </label>
+                    <label for="subscribe-field">
+                      <input type="checkbox" name="white" checked>
+                      <span>Белый</span>
+                    </label>
 
-                  <label for="subscribe-field">
-                    <input type="checkbox" name="white" checked>
-                    <span>Белый</span>
-                  </label>
+                    <label for="subscribe-field">
+                      <input type="checkbox" name="blue" checked>
+                      <span>Синий</span>
+                    </label>
 
-                  <label for="subscribe-field">
-                    <input type="checkbox" name="blue" checked>
-                    <span>Синий</span>
-                  </label>
+                    <label for="subscribe-field">
+                      <input type="checkbox" name="red" checked>
+                      <span>Красный</span>
+                    </label>
 
-                  <label for="subscribe-field">
-                    <input type="checkbox" name="red" checked>
-                    <span>Красный</span>
-                  </label>
+                    <label for="subscribe-field">
+                      <input type="checkbox" name="pink" checked>
+                      <span>Розовый</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
 
-                  <label for="subscribe-field">
-                    <input type="checkbox" name="pink" checked>
-                    <span>Розовый</span>
-                  </label>
-                </div>
-              </fieldset>
-
+              <div class="bluetooth-container">
               <fieldset class="filters-form-fieldset-bluetooth">
                 <legend>Bluetooth</legend>
                 <label class="radio-button">
@@ -142,8 +149,9 @@
                   <span>Нет</span>
                 </label>
               </fieldset>
+            </div>
 
-              <button class="filters-form-button" type="submit"> Показать</button>
+              <a href="#" class="filters-form-button"> <span>Показать</span></a>
 
             </form>
 
@@ -170,21 +178,26 @@
             </div>
 
 
+
+
+
             <div class="selfie-catalog-container ">
 
-              <article class="selfie-catalog-item">
+              <section class="catalog-list">
 
 
                 <div class="product">
                   <div class="product-img">
                     <img src="img/product-1.jpg" alt="selfie-photo-1" width="360" height="380">
+                    <div class="product-hover visually-hidden">
+                      <a>Подробнее</a>
+                    </div>
                   </div>
                   <div class="product-info">
-                    <div>
-                    <p>Любительская</p>
-                    <p>селфи-палка</p>
-                  </div>
-
+                    <div class="product-title">
+                      <p>Любительская</p>
+                      <p>селфи-палка</p>
+                    </div>
                     <span class="product-price">500 ₽</span>
                   </div>
                 </div>
@@ -192,45 +205,53 @@
                 <div class="product">
                   <div class="product-img">
                     <img src="img/product-2.jpg" alt="selfie-photo-2" width="360" height="380">
+                    <div class="product-hover visually-hidden">
+                      <a>Подробнее</a>
+                    </div>
                   </div>
                   <div class="product-info">
-                    <div>
-                    <p>Профессиональная </p>
-                  <p>селфи-палка </p>
-                </div>
+                    <div class="product-title">
+                      <p>Профессиональная</p>
+                      <p>селфи-палка</p>
+                    </div>
                     <span class="product-price">1 500 ₽</span>
                   </div>
                 </div>
 
-                <div class="selfies-column">
-                  <div class="product">
-                    <div class="product-img">
-                      <img src="img/product-3.jpg" alt="selfie-photo-3" width="360" height="380">
-                    </div>
-                    <div class="product-info">
-                      <div>
-                      <p>Непотопляемая</p>
-                        <p>селфи-палка</p>
-                    </div>
-                      <span class="product-price">2 500 ₽</span>
+
+                <div class="product">
+                  <div class="product-img">
+                    <img src="img/product-3.jpg" alt="selfie-photo-3" width="360" height="380">
+                    <div class="product-hover visually-hidden">
+                      <a>Подробнее</a>
                     </div>
                   </div>
-
-                  <div class="product">
-                    <div class="product-img">
-                      <img src="img/product-4.jpg" alt="selfie-photo-4" width="360" height="380">
+                  <div class="product-info">
+                    <div class="product-title">
+                      <p>Непотопляемая</p>
+                      <p>селфи-палка</p>
                     </div>
-                    <div class="product-info">
-                      <div>
-                      <p>Селфи-палка «Следуй</p>
-                        <p> за мной»</p>
-                    </div>
-                      <span class="product-price">1 500 ₽</span>
-
-                    </div>
+                    <span class="product-price">2 500 ₽</span>
                   </div>
                 </div>
-              </article>
+
+                <div class="product">
+                  <div class="product-img">
+                    <img src="img/product-4.jpg" alt="selfie-photo-4" width="360" height="380">
+                    <div class="product-hover visually-hidden">
+                      <a>Подробнее</a>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <div class="product-title">
+                      <p>Селфи-палка «Следуй</p>
+                      <p>за мной»</p>
+                    </div>
+                    <span class="product-price">1 500 ₽</span>
+                  </div>
+                </div>
+
+              </section>
 
 
               <div class="more-container">
