@@ -21,8 +21,11 @@
         <nav class="main-nav ">
           <div class="search">
             <form class="search-form" action="https://echo.htmlacademy.ru/." method="post">
-              <input class="search" type="text" placeholder="Поиск по сайту">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
+              <div class="search-container">
+                <img class="search-icon" src="img/search.svg" alt="search" width="16" height="16">
+                <input class="search" type="text" placeholder="Текст поиска">
+                <label class="visually-hidden" for="search">Текст поиска</label>
+              </div>
               <button type="submit">Найти</button>
             </form>
           </div>
@@ -44,9 +47,9 @@
             <li class="navigation-item">
 
               <a class="navigation-link navigation-link-shopping" href="#">
-                <div>
+                <span class="contrast-icon">
                   <img class="contrast" src="img/contrast.svg" alt="contrast" width="10" height="12">
-                </div>
+                </span>
                 <span>Сравнить</span>
               </a>
             </li>
@@ -98,58 +101,85 @@
           <div class="selfie-filters ">
             <span class="filters">фильтр:</span>
             <form class="filters-form" action="https://echo.htmlacademy.ru/." method="post">
-              <div class="price-container">
-                <fieldset class="price">
-                  <legend for="dayscount">Стоимость</legend>
-                  от 0 <input type="text" id="dayscount" name="dayscount" min="0" max="5000" step="1"> до 5000
-                </fieldset>
-              </div>
 
-              <div class="color-container">
-                <fieldset class="filters-form-fieldset-color">
-                  <legend>Цвет</legend>
-                  <div class="checkboxes">
-                    <label for="subscribe-field">
-                      <input type="checkbox" name="black" checked>
-                      <span>Черный</span>
-                    </label>
-
-                    <label for="subscribe-field">
-                      <input type="checkbox" name="white" checked>
-                      <span>Белый</span>
-                    </label>
-
-                    <label for="subscribe-field">
-                      <input type="checkbox" name="blue" checked>
-                      <span>Синий</span>
-                    </label>
-
-                    <label for="subscribe-field">
-                      <input type="checkbox" name="red" checked>
-                      <span>Красный</span>
-                    </label>
-
-                    <label for="subscribe-field">
-                      <input type="checkbox" name="pink" checked>
-                      <span>Розовый</span>
-                    </label>
+              <fieldset class="fieldset-price">
+                <legend for="dayscount">Стоимость</legend>
+                <div class="price-scale">
+                  <div class="scale-controls" style="width: 119px;">
+                    <div class="range-bar" style="left: 42px; width: 136px">
+                      <button class="price-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="price-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
                   </div>
-                </fieldset>
-              </div>
+                </div>
 
-              <div class="bluetooth-container">
-              <fieldset class="filters-form-fieldset-bluetooth">
+                <div class="price-controls-wrapper">
+                  <label class="price-filter-label">
+                    от <input class="price-input" type="number" value="0" name="min-price">
+                  </label>
+                  <label class="price-filter-label">
+                    до <input class="price-input" type="number" value="5000" name="max-price" style="width: 37px">
+                  </label>
+                </div>
+
+              </fieldset>
+
+
+
+              <fieldset class="fieldset-color">
+                <legend>Цвет</legend>
+                <div class="checkboxes">
+                  <label class="control">
+                    <input class="color-input visually-hidden" type="checkbox" value="black" name="black" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Черный</span>
+                  </label>
+
+                  <label class="control">
+                    <input class="color-input visually-hidden" type="checkbox" value="white" name="white" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Белый</span>
+                  </label>
+
+                  <label class="control">
+                    <input class="color-input visually-hidden" type="checkbox" value="blue" name="blue" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Синий</span>
+                  </label>
+
+                  <label class="control">
+                    <input class="color-input visually-hidden" type="checkbox" value="red" name="red" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Красный</span>
+                  </label>
+
+                  <label class="control">
+                    <input class="color-input visually-hidden" type="checkbox" value="pink" name="pink" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Розовый</span>
+                  </label>
+                </div>
+              </fieldset>
+
+
+              <fieldset class="fieldset-bluetooth">
                 <legend>Bluetooth</legend>
                 <label class="radio-button">
-                  <input type="radio" name="Bluetooth" value="Есть">
+                  <input class="visually-hidden bluetooth-input" type="radio" name="Bluetooth" value="Есть">
+                  <span class="radio-control"></span>
                   <span>Есть</span>
                 </label>
                 <label class="radio-button">
-                  <input type="radio" name="Bluetooth" value="Нет" checked>
+                  <input class="visually-hidden bluetooth-input" type="radio" name="Bluetooth" value="Нет" checked>
+                  <span class="radio-control"></span>
                   <span>Нет</span>
                 </label>
               </fieldset>
-            </div>
+
 
               <a href="#" class="filters-form-button"> <span>Показать</span></a>
 
@@ -163,11 +193,10 @@
             <div class="sorting">
               <p class="sorting-label">сортировка:</p>
 
-              <select name="sorting-type">
-                <option value="">Популярные</option>
-                <option value="">Новинки</option>
-                <option value="">Цена</option>
-                <option value="">Отзывы</option>
+              <select class="sorting-type" aria-label="Сортировка">
+                <option value="popular">Популярные</option>
+                <option value="new">Новинки</option>
+                <option value="price">Цена</option>
               </select>
 
               <ul class="scroling">
@@ -195,8 +224,7 @@
                   </div>
                   <div class="product-info">
                     <div class="product-title">
-                      <p>Любительская</p>
-                      <p>селфи-палка</p>
+                      <p>Любительская <br> селфи-палка</p>
                     </div>
                     <span class="product-price">500 ₽</span>
                   </div>
@@ -211,8 +239,7 @@
                   </div>
                   <div class="product-info">
                     <div class="product-title">
-                      <p>Профессиональная</p>
-                      <p>селфи-палка</p>
+                      <p>Профессиональная <br> селфи-палка</p>
                     </div>
                     <span class="product-price">1 500 ₽</span>
                   </div>
@@ -228,8 +255,7 @@
                   </div>
                   <div class="product-info">
                     <div class="product-title">
-                      <p>Непотопляемая</p>
-                      <p>селфи-палка</p>
+                      <p>Непотопляемая <br> селфи-палка</p>
                     </div>
                     <span class="product-price">2 500 ₽</span>
                   </div>
@@ -244,8 +270,7 @@
                   </div>
                   <div class="product-info">
                     <div class="product-title">
-                      <p>Селфи-палка «Следуй</p>
-                      <p>за мной»</p>
+                      <p>Селфи-палка «Следуй <br> за мной»</p>
                     </div>
                     <span class="product-price">1 500 ₽</span>
                   </div>
@@ -311,6 +336,74 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close visually-hidden">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+
+          <div class="delivery-form-wrapper">
+            <form class="delivery-form" action="" method="post">
+
+              <div class="authorization">
+                <label class="delivery-auth" for="delivery-login">Ваше имя:
+                  <div class="auth-form">
+                    <input class="delivery-form-field field" type="text" id="delivery-login" name="delivery-login"
+                      placeholder="Введите имя">
+                    <img class="login-image" src="img/login.svg" alt="account" width="13" height="12">
+                  </div>
+                </label>
+
+
+                <label class="delivery-auth" for="delivery-email">Ваш e-mail:
+                  <div class="auth-form">
+                    <input class="delivery-form-field field" type="text" id="delivery-email" name="delivery-email"
+                      placeholder="Ваш e-mail:">
+                    <img class="email-image" src="img/email.svg" alt="email" width="15" height="12">
+                  </div>
+                </label>
+              </div>
+
+              <div class="order">
+                <label class="delivery-auth" for="delivery-email">Что нужно привезти:
+                  <div class="order-form">
+                    <input class="delivery-form-field field" type="text" id="delivery-email" name="delivery-email"
+                      placeholder="В свободной форме">
+                  </div>
+                </label>
+
+                <label class="delivery-auth" for="quantity">
+                   <span class="count-form-wrapper">Количество:
+                    <span class="tooltip">
+                      <button class="info-order-image">
+                        <img src="img/info-2.svg" alt="info" width="2" height="12">
+                      </button>
+                      <span class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по
+                        требованиям
+                        к провозу багажа.</span>
+                    </span>
+                  </span>
+                  <div class="count-form">
+                    <button class="min-count">
+                      <img src="img/minus.svg" alt="minus" width="16" height="2">
+                    </button>
+                    <input class="count-order" type="text" id="quantity" name="count" value="1">
+                    <button class="plus-count">
+                      <img src="img/plus.svg" alt="plus" width="16" height="16">
+                    </button>
+                  </div>
+                </label>
+              </div>
+              <button class="delivery-form-button" type="submit"> <span>Отправить</span></b>
+            </form>
+          </div>
+
+        </section>
+      </div>
+    </div>
 
   </body>
 
