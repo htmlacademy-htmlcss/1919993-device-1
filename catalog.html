@@ -19,16 +19,14 @@
 
       <div class="navigation">
         <nav class="main-nav ">
-          <div class="search">
-            <form class="search-form" action="https://echo.htmlacademy.ru/." method="post">
-              <div class="search-container">
-                <img class="search-icon" src="img/search.svg" alt="search" width="16" height="16">
-                <input class="search" type="text" placeholder="Текст поиска">
-                <label class="visually-hidden" for="search">Текст поиска</label>
-              </div>
-              <button type="submit">Найти</button>
-            </form>
-          </div>
+          <form class="search-form" action="https://echo.htmlacademy.ru/." method="post">
+            <div class="search-container">
+              <img class="search-icon" src="img/search.svg" alt="search" width="16" height="16">
+              <label class="visually-hidden" for="search">Поиск по сайту</label>
+              <input class="search" type="text" placeholder="Поиск по сайту">
+            </div>
+            <button type="submit">Найти</button>
+          </form>
           <ul class="nav-list-navigation-account">
             <li class="navigation-item">
               <a class="navigation-link " href="#">
@@ -38,7 +36,7 @@
             </li>
 
             <li class="navigation-item account-out">
-              <a class="navigation-link " href="#">Выйти</a>
+              <a class="navigation-link  navigation-link-out" href="#">Выйти</a>
             </li>
           </ul>
 
@@ -90,9 +88,23 @@
       <section class="selfie container">
         <h1>Моноподы для селфи</h1>
         <ul class="selfie-list">
-          <li class="selfie-item"><a href="#">Главная</a></li>
-          <li class="selfie-item"><a href="#">Каталог товаров</a></li>
-          <li class="selfie-item"><a>Моноподы для селфи</a></li>
+          <li class="selfie-item">
+            <a href="#">
+              Главная
+              <img src="img/arrow-sliders.svg" width="4" height="8">
+            </a>
+          </li>
+          <li class="selfie-item">
+            <a href="#">
+              Каталог товаров
+              <img src="img/arrow-sliders.svg" width="4" height="8">
+            </a>
+          </li>
+          <li class="selfie-item">
+            <a>
+              Моноподы для селфи
+            </a>
+          </li>
         </ul>
       </section>
 
@@ -107,10 +119,10 @@
                 <div class="price-scale">
                   <div class="scale-controls" style="width: 119px;">
                     <div class="range-bar" style="left: 42px; width: 136px">
-                      <button class="price-toggle toggle-min">
+                      <button class="price-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="price-toggle toggle-max">
+                      <button class="price-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
@@ -200,8 +212,12 @@
               </select>
 
               <ul class="scroling">
-                <li class="visually-hidden"><a href="#">up</a></li>
-                <li class="visually-hidden"><a href="#">down</a></li>
+                <li class="scroling-up"><button class="scroling-button" type="button">
+                  <img src="img/up-down.svg" alt="up" width="12" height="10">
+                </button></li>
+                <li class="scroling-down"><button class="scroling-button" type="button">
+                  <img src="img/up-down.svg" alt="down" width="12" height="10">
+                </button></li>
               </ul>
 
             </div>
@@ -218,8 +234,8 @@
                 <div class="product">
                   <div class="product-img">
                     <img src="img/product-1.jpg" alt="selfie-photo-1" width="360" height="380">
-                    <div class="product-hover visually-hidden">
-                      <a>Подробнее</a>
+                    <div class="product-hover">
+                      <a href="#"><span class="product-hover-span">Подробнее</span></a>
                     </div>
                   </div>
                   <div class="product-info">
@@ -233,8 +249,8 @@
                 <div class="product">
                   <div class="product-img">
                     <img src="img/product-2.jpg" alt="selfie-photo-2" width="360" height="380">
-                    <div class="product-hover visually-hidden">
-                      <a>Подробнее</a>
+                    <div class="product-hover">
+                      <a href="#"><span class="product-hover-span">Подробнее</span></a>
                     </div>
                   </div>
                   <div class="product-info">
@@ -249,8 +265,8 @@
                 <div class="product">
                   <div class="product-img">
                     <img src="img/product-3.jpg" alt="selfie-photo-3" width="360" height="380">
-                    <div class="product-hover visually-hidden">
-                      <a>Подробнее</a>
+                    <div class="product-hover">
+                      <a href="#"><span class="product-hover-span">Подробнее</span></a>
                     </div>
                   </div>
                   <div class="product-info">
@@ -264,8 +280,8 @@
                 <div class="product">
                   <div class="product-img">
                     <img src="img/product-4.jpg" alt="selfie-photo-4" width="360" height="380">
-                    <div class="product-hover visually-hidden">
-                      <a>Подробнее</a>
+                    <div class="product-hover">
+                      <a href="#"><span class="product-hover-span">Подробнее</span></a>
                     </div>
                   </div>
                   <div class="product-info">
@@ -283,15 +299,17 @@
                 <button class="more" type="button">Загрузить ещё </button>
               </div>
 
-              <ol class="pagination">
-                <li class="pagination-item pagination-item-back"><a href="#">Назад</a></li>
-                <li class="pagination-item page"><a href="#">1</a></li>
-                <li class="pagination-item page"><a href="#">2</a></li>
-                <li class="pagination-item page"><a href="#">3</a></li>
-                <li class="pagination-item page"><span>...</span></li>
-                <li class="pagination-item page"><a href="#">15</a></li>
-                <li class="pagination-item pagination-item-next"><a href="#">Вперёд</a></li>
-              </ol>
+              <div class="pagination">
+                <a class="pagination-item-back" href="#">Назад</a>
+                <ol class="pagination-count">
+                  <li class="pagination-item"><a href="#">1</a></li>
+                  <li class="pagination-item"><a href="#">2</a></li>
+                  <li class="pagination-item"><a href="#">3</a></li>
+                  <li class="pagination-item"><a href="#">...</a></li>
+                  <li class="pagination-item"><a href="#">15</a></li>
+                </ol>
+                <a class="pagination-item-next" href="#">Вперёд</a>
+              </div>
             </div>
           </section>
         </div>
@@ -376,7 +394,7 @@
                 </label>
 
                 <label class="delivery-auth" for="quantity">
-                   <span class="count-form-wrapper">Количество:
+                  <span class="count-form-wrapper">Количество:
                     <span class="tooltip">
                       <button class="info-order-image">
                         <img src="img/info-2.svg" alt="info" width="2" height="12">
