@@ -1,0 +1,16 @@
+{
+  "name": "device",
+  "version": "1.0.0",
+  "description": "* Студент: [ульяна балесная](https://up.htmlacademy.ru/htmlcss-individual/1/user/1919993). * Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/id288419).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint": "^16.2.1",
+    "stylelint-config-htmlacademy": "^4.1.0"
+  }
+}
