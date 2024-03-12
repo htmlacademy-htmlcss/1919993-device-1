@@ -2190,6 +2190,7 @@ body {
   width: 30px;
   height: 30px;
   padding: 0;
+  background-color: transparent;
 }
 
 .scroling-button:active {
