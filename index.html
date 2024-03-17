@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   </head>
 
   <body>
@@ -98,18 +99,20 @@
 
 
         <nav class="nav-list">
-          <a class="navigation-link-list catalog-items-list" href="catalog.html">
-            <span>Каталог товаров</span>
-            <div class="catalog-list-img">
-              <img src="img/catalog-more.svg" alt="more" width="16" height="16">
-              <div class="popover-catalog">
 
+          <div class="catalog-container">
+          <a class="navigation-link-list" href="catalog.html">
+            <div class="catalog-list-container">
+              <span>Каталог товаров</span>
+              <div class="more-image">
+                <img src="img/catalog-more.svg" alt="more" width="16" height="16">
+              </div>
+            </a>
+              <div class="popover-catalog">
                 <div class="popover-items">
                   <div class="popover-catalog-list catalog-distance">
                     <a href="#">Виртуальная реальность</a>
-
                     <a href="#">Моноподы для cелфи</a>
-
                     <a href="#">Экшн-камеры</a>
                   </div>
                   <div class="popover-catalog-list ">
@@ -123,7 +126,12 @@
                 </div>
               </div>
             </div>
-          </a>
+
+          </div>
+
+
+
+
           <ul class="navigation-list">
 
             <li class="navigation-list-item">
@@ -145,8 +153,8 @@
     </header>
 
     <main class="main-container">
-      <section class="first-slide item-slider container">
-        <div class="first-slide-info">
+      <section class="item-slider container">
+        <div class="slide-content first-slide-order">
           <div class="slider-photo">
             <img src="img/slider-1.png" alt="quadrocopter" width="560" height="560">
           </div>
@@ -199,8 +207,8 @@
 
       </section>
 
-      <section class=" item-slider container hidden">
-        <div class="second-slide-info">
+      <section class="item-slider container hidden">
+        <div class="slide-content second-slide-order">
           <div class="slider-photo">
             <img src="img/slider-second.png" alt="quadrocopter" width="560" height="560">
           </div>
@@ -240,8 +248,8 @@
       </section>
 
 
-      <section class="third-slide item-slider container hidden">
-        <div class="third-slide-info">
+      <section class="item-slider container hidden">
+        <div class="slide-content third-slide-order">
           <div class="slider-photo">
             <img src="img/slider-third.png" alt="quadrocopter" width="560" height="560">
           </div>
@@ -293,7 +301,7 @@
       </section>
 
 
-      <section class="slider-catalog">
+      <section class="slider-catalog container">
         <ul class="slider-list ">
           <li class="slider-item">
             <a class="slider-link" href="#">
@@ -389,7 +397,7 @@
       </section>
 
 
-      <div class="slide visually-hidden">
+      <div class="slide hidden">
         <div class="slides-text">
           <h2>Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас
@@ -401,7 +409,7 @@
         </div>
       </div>
 
-      <div class="slide visually-hidden">
+      <div class="slide hidden">
         <div class="slides-text">
           <h2>Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
@@ -505,7 +513,7 @@
         </div>
 
         <div class="footer-info-container">
-          <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+          <address class="footer-address">Санкт-Петербург, набережная <br>  реки Карповки, 5, литера П.</address>
 
           <ul class="footer-list">
             <li class="footer-list-item"><a class="footer-items" href="#">Доставка</a></li>
