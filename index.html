@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
@@ -15,17 +16,13 @@
         <img src="img/logo.svg" alt="HTML Academy" width="145" height="36">
       </a>
 
-
-
-
-
       <div class="navigation">
         <nav class="main-nav">
           <form class="search-form" action="https://echo.htmlacademy.ru/." method="post">
             <div class="search-container">
               <img class="search-icon" src="img/search.svg" alt="search" width="16" height="16">
               <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input class="search" type="text" placeholder="Поиск по сайту">
+              <input class="search" type="text" id="search" name="search" placeholder="Поиск по сайту">
             </div>
             <button type="submit"><span class="search-span">Найти</span></button>
           </form>
@@ -64,7 +61,7 @@
                   <div class="popover-item">
                     <img class="popover-item-img" src="img/popover-item-one.png" alt="popover-1" width="39" height="43">
                     <span class="popover-item-title">Любительская <br> селфи-палка</span>
-                    <button class="popover-cancel-button">
+                    <button class="popover-cancel-button" type="button">
                       <span class="visually-hidden">Закрыть</span>
                     </button>
                   </div>
@@ -72,24 +69,24 @@
                   <div class="popover-item">
                     <img src="img/popover-item-two.png" alt="popover-2" width="39" height="43">
                     <span class="popover-item-title">Профессиональная <br> селфи-палка</span>
-                    <button class="popover-cancel-button">
+                    <button class="popover-cancel-button" type="button">
                       <span class="visually-hidden">Закрыть</span>
                     </button>
                   </div>
 
                   <div class="popover-total">
                     <div class="popover-total-text">
-                      <span class="">Товаров:</span>
+                      <span>Товаров:</span>
                       <span class="popover-total-count">2</span>
                     </div>
                     <div class="popover-total-text">
-                      <span class="">Сумма:</span>
+                      <span>Сумма:</span>
                       <span class="popover-total-price">2000₽</span>
                     </div>
                   </div>
 
                   <div class="popover-button-open">
-                    <button class="popover-button">Открыть корзину</button>
+                    <button class="popover-button" type="button">Открыть корзину</button>
                   </div>
                 </div>
               </div>
@@ -100,34 +97,33 @@
 
         <nav class="nav-list">
 
-          <div class="catalog-container">
-          <a class="navigation-link-list" href="catalog.html">
-            <div class="catalog-list-container">
+          <div class="catalog-list-container">
+            <a class="navigation-link-list" href="catalog.html">
               <span>Каталог товаров</span>
               <div class="more-image">
                 <img src="img/catalog-more.svg" alt="more" width="16" height="16">
               </div>
             </a>
-              <div class="popover-catalog">
-                <div class="popover-items">
-                  <div class="popover-catalog-list catalog-distance">
-                    <a href="#">Виртуальная реальность</a>
-                    <a href="#">Моноподы для cелфи</a>
-                    <a href="#">Экшн-камеры</a>
-                  </div>
-                  <div class="popover-catalog-list ">
-                    <a href="#">Фитнес-браслеты</a>
-                    <br>
-                    <a href="#">Умные часы</a>
-                  </div>
-                  <div class="popover-catalog-list">
-                    <a href="#">Квадрокоптеры</a>
-                  </div>
+
+            <div class="popover-catalog">
+              <div class="popover-items">
+                <div class="popover-catalog-list catalog-distance">
+                  <a href="#">Виртуальная реальность</a>
+                  <a href="#">Моноподы для cелфи</a>
+                  <a href="#">Экшн-камеры</a>
+                </div>
+                <div class="popover-catalog-list ">
+                  <a href="#">Фитнес-браслеты</a>
+                  <br>
+                  <a href="#">Умные часы</a>
+                </div>
+                <div class="popover-catalog-list">
+                  <a href="#">Квадрокоптеры</a>
                 </div>
               </div>
             </div>
-
           </div>
+
 
 
 
@@ -160,10 +156,10 @@
           </div>
 
           <div class="navigation-container">
-            <button class="navigation-button"><img class="navigation-button-left" src="img/arrow-slide.svg" width="20"
-                height="60" alt="left"></button>
-            <button class="navigation-button"><img class="navigation-button-right" src="img/arrow-slide.svg" width="20"
-                height="60" alt="left"></button>
+            <button class="navigation-button" type="button" aria-label="left"><img class="navigation-button-left"
+                src="img/arrow-slide.svg" width="20" height="60" alt="left"></button>
+            <button class="navigation-button" type="button" aria-label="right"><img class="navigation-button-right"
+                src="img/arrow-slide.svg" width="20" height="60" alt="left"></button>
           </div>
 
           <div class="slider-nav">
@@ -176,7 +172,7 @@
                 камеру.
               </p>
 
-              <a href="#" class="slide-button"><span>Подробнее</span></a>
+              <a class="slide-button" href="#"><span>Подробнее</span></a>
 
 
             </div>
@@ -189,7 +185,7 @@
                 <dd class="distance-info">Дальность полета</dd>
               </div>
               <div class="slider-info-text">
-                <dt class="distance"> 50 м</dt>
+                <dt class="distance">50 м</dt>
                 <dd class="distance-info">Радиус поражения</dd>
               </div>
             </dl>
@@ -200,7 +196,7 @@
         <ul class="sliders-orders">
           <li class="slide-order-active"><span class="visually-hidden">1 slide</span></li>
           <li class="slide-order"><span class="visually-hidden">2 slide</span></li>
-          <li class="slide-order"><span class="visually-hidden"> 3 slide</span></li>
+          <li class="slide-order"><span class="visually-hidden">3 slide</span></li>
         </ul>
 
 
@@ -212,7 +208,6 @@
           <div class="slider-photo">
             <img src="img/slider-second.png" alt="quadrocopter" width="560" height="560">
           </div>
-
           <div class="slider-nav">
             <div class="slider-text">
               <h2>
@@ -221,16 +216,15 @@
               </h2>
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               </p>
-
-              <a href="#" class="slide-button"><span>Подробнее</span></a>
-
-
+              <a class="slide-button" href="#"><span>Подробнее</span></a>
             </div>
 
-            <div class="slider-info-text">
-              <dt class="distance">48 часов</dt>
-              <dd class="distance-info">Без подзарядки</dd>
-            </div>
+            <dl class="slider-info">
+              <div class="slider-info-text">
+                <dt class="distance">48 часов</dt>
+                <dd class="distance-info">Без подзарядки</dd>
+              </div>
+            </dl>
 
 
           </div>
@@ -240,7 +234,7 @@
         <ul class="sliders-orders">
           <li class="slide-order"><span class="visually-hidden">1 slide</span></li>
           <li class="slide-order-active"><span class="visually-hidden">2 slide</span></li>
-          <li class="slide-order"><span class="visually-hidden"> 3 slide</span></li>
+          <li class="slide-order"><span class="visually-hidden">3 slide</span></li>
         </ul>
 
 
@@ -265,7 +259,7 @@
 
               </p>
 
-              <a href="#" class="slide-button"><span>Подробнее</span></a>
+              <a class="slide-button" href="#"><span>Подробнее</span></a>
 
 
             </div>
@@ -278,11 +272,11 @@
                 <dd class="distance-info">Длина палки</dd>
               </div>
               <div class="slider-info-text">
-                <dt class="distance"> 5 кг</dt>
+                <dt class="distance">5 кг</dt>
                 <dd class="distance-info">Вес палки</dd>
               </div>
               <div class="slider-info-text">
-                <dt class="distance"> Карбон</dt>
+                <dt class="distance">Карбон</dt>
                 <dd class="distance-info">Материал</dd>
               </div>
             </dl>
@@ -293,7 +287,7 @@
         <ul class="sliders-orders">
           <li class="slide-order"><span class="visually-hidden">1 slide</span></li>
           <li class="slide-order"><span class="visually-hidden">2 slide</span></li>
-          <li class="slide-order-active"><span class="visually-hidden"> 3 slide</span></li>
+          <li class="slide-order-active"><span class="visually-hidden">3 slide</span></li>
         </ul>
 
 
@@ -302,6 +296,7 @@
 
 
       <section class="slider-catalog container">
+        <h2 class="visually-hidden">Каталог-лист</h2>
         <ul class="slider-list ">
           <li class="slider-item">
             <a class="slider-link" href="#">
@@ -353,7 +348,7 @@
               <div class="slider-img">
                 <img src="img/index-catalog-images6.svg" alt="quadrocopters" width="160" height="160">
               </div>
-              <span class="slider-list-text"> Квадрокоптеры</span>
+              <span class="slider-list-text">Квадрокоптеры</span>
             </a>
           </li>
         </ul>
@@ -361,6 +356,7 @@
       </section>
 
       <section class="slider">
+        <h2 class="visually-hidden">Популярные услуги</h2>
         <article class="slide-container container">
           <div class="container-slides">
             <ul class="slides-controls ">
@@ -371,12 +367,12 @@
               </li>
               <li class="controls-item">
                 <a class="controls-link" href="#">
-                  <span class="controls-span"> Гарантия</span>
+                  <span class="controls-span">Гарантия</span>
                 </a>
               </li>
               <li class="controls-item ">
                 <a class="controls-link" href="#">
-                  <span class="controls-span"> Кредит</span>
+                  <span class="controls-span">Кредит</span>
                 </a>
               </li>
             </ul>
@@ -420,11 +416,9 @@
         </div>
       </div>
 
-      </div>
-
-
 
       <section class="delivery-info container">
+        <h2 class="visually-hidden">Доставка</h2>
         <div class="delivery-text">
           <div class="delivery-car">
             <img src="img/car.svg" alt="delivery" width="47" height="31">
@@ -481,6 +475,7 @@
       </section>
 
       <section class="subscribe-news">
+        <h2 class="visually-hidden">Подпишитесь на нашу рассылку</h2>
         <article class="subscribe-container container">
           <div class="subscribe">
             <h2>Подпишитесь на рассылку</h2>
@@ -491,18 +486,19 @@
           <div class="subscribe-form-wrapper">
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/." method="post">
               <label class="visually-hidden" for="email">Ваш e-mail</label>
-              <input class="subscribe-input" type="email" placeholder="Ваш e-mail">
+              <input class="subscribe-input" id="email" type="email" name="email" placeholder="Ваш e-mail">
               <button class="accept-button" type="submit">Подписаться</button>
             </form>
 
             <div class="subscribe-price">
               <div class="subscribe-price-icon">
-                <img src="img/tick-big 1.svg" alt="submit" width="16" height="16">
+                <img src="img/tick-1.svg" alt="submit" width="16" height="16">
               </div>
               <span>Это бесплатно</span>
             </div>
+
+          </div>
         </article>
-        </div>
       </section>
     </main>
 
@@ -513,7 +509,7 @@
         </div>
 
         <div class="footer-info-container">
-          <address class="footer-address">Санкт-Петербург, набережная <br>  реки Карповки, 5, литера П.</address>
+          <address class="footer-address">Санкт-Петербург, набережная <br> реки Карповки, 5, литера П.</address>
 
           <ul class="footer-list">
             <li class="footer-list-item"><a class="footer-items" href="#">Доставка</a></li>
@@ -540,7 +536,7 @@
           </ul>
 
           <div class="footer-icon">
-            <a href="https://htmlacademy.ru/">
+            <a href="https://htmlacademy.ru/" aria-label="html academy">
               <svg class="html-logo" xmlns="http://www.w3.org/2000/svg" width="115" height="33" fill="currentColor">
                 <path
                   d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" />
@@ -553,45 +549,46 @@
 
     <div class="modal-container modal-container-close hidden">
       <div class="modal modal-delivery">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
 
 
 
-        <form class="delivery-form modal-content" action="" method="post">
+        <form class="delivery-form modal-content" action="https://echo.htmlacademy.ru/." method="post">
           <h2 class="modal-title">Доставка под заказ</h2>
           <div class="authorization">
             <label class="delivery-auth" for="delivery-login">Ваше имя:
-              <div class="auth-form">
+              <span class="auth-form">
                 <input class="delivery-form-field field" type="text" id="delivery-login" name="delivery-login"
                   placeholder="Введите имя">
                 <img class="login-image" src="img/login.svg" alt="account" width="13" height="12">
-              </div>
+              </span>
             </label>
 
 
             <label class="delivery-auth" for="delivery-email">Ваш e-mail:
-              <div class="auth-form">
+              <span class="auth-form">
                 <input class="delivery-form-field field" type="text" id="delivery-email" name="delivery-email"
                   placeholder="Ваш e-mail:">
                 <img class="email-image" src="img/email.svg" alt="email" width="15" height="12">
-              </div>
+              </span>
             </label>
           </div>
 
           <div class="order">
-            <label class="delivery-auth" for="delivery-email">Что нужно привезти:
-              <div class="order-form">
-                <input class="delivery-form-field field-order" type="text" id="delivery-email" name="delivery-email"
+            <label class="delivery-auth" for="delivery-form">Что нужно привезти:
+              <span class="order-form">
+                <input class="delivery-form-field field-order" type="text" id="delivery-form" name="delivery-form"
                   placeholder="В свободной форме">
-              </div>
+              </span>
             </label>
 
-            <label class="delivery-auth" for="quantity">
-              <span class="count-form-wrapper">Количество:
+            <div class="delivery-auth">
+              <span class="count-form-wrapper">
+                <label for="quantity">Количество:</label>
                 <span class="tooltip">
-                  <button class="info-order-image">
+                  <button class="info-order-image" type="button" aria-label="info">
                     <img src="img/info-2.svg" alt="info" width="2" height="12">
                   </button>
                   <span class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по
@@ -599,18 +596,19 @@
                     к провозу багажа.</span>
                 </span>
               </span>
-              <div class="count-form">
-                <button class="min-count">
+              <span class="count-form">
+
+                <button class="min-count" type="button" aria-label="minus">
                   <img src="img/minus.svg" alt="minus" width="16" height="2">
                 </button>
                 <input class="count-order" type="text" id="quantity" name="count" value="1">
-                <button class="plus-count">
+                <button class="plus-count" type="button" aria-label="plus">
                   <img class="plus-image" src="img/plus.svg" alt="plus" width="16" height="16">
                 </button>
-              </div>
-            </label>
+              </span>
+            </div>
           </div>
-          <button class="delivery-form-button" type="submit"> <span>Отправить</span></b>
+          <button class="delivery-form-button" type="submit"><span>Отправить</span></button>
         </form>
 
 
