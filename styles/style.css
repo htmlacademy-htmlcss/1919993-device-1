@@ -383,7 +383,7 @@ body {
   width: 1040px;
   align-items: center;
   margin: 0 auto;
-  margin-top: 9px;
+  margin-top: 8px;
   justify-content: space-between;
 }
 
@@ -1749,7 +1749,7 @@ body {
 /* catalog */
 
 .page-catalog-header {
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 }
 
 
@@ -1759,7 +1759,7 @@ body {
   font-weight: 800;
   line-height: 50px;
   margin-top: 38px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   margin-left: 60px;
   padding: 0;
 }
@@ -1774,6 +1774,8 @@ body {
 
 .selfie-item {
   list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
 .selfie-item a {
@@ -1795,9 +1797,19 @@ body {
   outline: 2px solid #af4fff;
 }
 
-.selfie-item img {
-  margin-left: 12px;
+.selfie-item::after {
+  content: "";
+  display: flex;
+  width: 4px;
+  height: 8px;
+  background-image: url("../img/arrow-sliders.svg");
+  margin-left: 16px;
   margin-right: 16px;
+  opacity: 0.2;
+}
+
+.selfie-item:last-child::after {
+  display: none;
 }
 
 .main-catalog-container {
@@ -1810,7 +1822,7 @@ body {
 .background-selfie {
   background: var(--basic-light, #f0f0f0);
   flex-shrink: 0;
-  margin-top: 12px;
+  margin-top: 17px;
 }
 
 .selfie-filters {
@@ -2040,9 +2052,8 @@ body {
   letter-spacing: -0.36px;
   margin-bottom: 20px;
   width: 200px;
-
   border-top: 2px solid;
-  padding-top: 12px;
+  padding-top: 10px;
   padding-left: 0;
 }
 
@@ -2105,7 +2116,7 @@ body {
   font-size: 18px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-  margin-top: 38px;
+  margin-top: 34px;
   margin-left: 15px;
   width: 220px;
   height: 40px;
