@@ -11,9 +11,10 @@
   </head>
 
   <body>
+    <h1 class="visually-hidden">Страница каталога</h1>
     <header class="page-header page-catalog-header container">
 
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <img src="img/logo.svg" alt="HTML Academy" width="145" height="36">
       </a>
 
@@ -43,7 +44,6 @@
           <ul class="nav-list-navigation-shopping">
 
             <li class="navigation-item">
-
               <a class="navigation-link navigation-link-shopping" href="#">
                 <span class="contrast-icon">
                   <img class="contrast" src="img/contrast.svg" alt="contrast" width="10" height="12">
@@ -54,13 +54,49 @@
 
             <li class="navigation-item">
               <a class="navigation-link " href="#">
-
                 <span class="cart-count">
                   <span class="count">2</span>
                   <img class="cart" src="img/trash.svg" alt="cart" width="16" height="14">
                 </span>
                 <span>Корзина</span>
+
+                <div class="popover-wrapper">
+                  <div class="popover">
+                    <div class="popover-item">
+                      <img class="popover-item-img" src="img/popover-item-one.png" alt="popover-1" width="39"
+                        height="43">
+                      <span class="popover-item-title">Любительская <br> селфи-палка</span>
+                      <button class="popover-cancel-button" type="button">
+                        <span class="visually-hidden">Закрыть</span>
+                      </button>
+                    </div>
+
+                    <div class="popover-item">
+                      <img src="img/popover-item-two.png" alt="popover-2" width="39" height="43">
+                      <span class="popover-item-title">Профессиональная <br> селфи-палка</span>
+                      <button class="popover-cancel-button" type="button">
+                        <span class="visually-hidden">Закрыть</span>
+                      </button>
+                    </div>
+
+                    <div class="popover-total">
+                      <div class="popover-total-text">
+                        <span>Товаров:</span>
+                        <span class="popover-total-count">2</span>
+                      </div>
+                      <div class="popover-total-text">
+                        <span>Сумма:</span>
+                        <span class="popover-total-price">2000₽</span>
+                      </div>
+                    </div>
+
+                    <div class="popover-button-open">
+                      <button class="popover-button" type="button">Открыть корзину</button>
+                    </div>
+                  </div>
+                </div>
               </a>
+
             </li>
           </ul>
         </nav>
@@ -68,10 +104,9 @@
         <nav class="nav-list">
 
           <div class="catalog-list-container">
-            <a class="navigation-link-list" href="catalog.html">
+            <a class="navigation-link-list" href="#">
               <span>Каталог товаров</span>
               <div class="more-image">
-                <img src="img/catalog-more.svg" alt="more" width="16" height="16">
               </div>
             </a>
 
@@ -84,7 +119,6 @@
                 </div>
                 <div class="popover-catalog-list ">
                   <a href="#">Фитнес-браслеты</a>
-                  <br>
                   <a href="#">Умные часы</a>
                 </div>
                 <div class="popover-catalog-list">
@@ -94,26 +128,21 @@
             </div>
           </div>
 
-
-
-
-
           <ul class="navigation-list">
 
             <li class="navigation-list-item">
-              <a class="navigation-link-list" href="#">Доставка</a>
+              <a class="navigation-link-list" href="#"><span>Доставка</span></a>
             </li>
 
             <li class="navigation-list-item">
-              <a class="navigation-link-list" href="#">Гарантия</a>
+              <a class="navigation-link-list" href="#"><span>Гарантия</span></a>
             </li>
 
             <li class="navigation-list-item">
-              <a class="navigation-link-list" href="#">Контакты</a>
+              <a class="navigation-link-list" href="#"><span>Контакты</span></a>
             </li>
           </ul>
         </nav>
-
 
       </div>
     </header>
@@ -191,19 +220,19 @@
                   </label>
 
                   <label class="control">
-                    <input class="color-input visually-hidden" type="checkbox" value="blue" name="blue" checked>
+                    <input class="color-input visually-hidden" type="checkbox" value="blue" name="blue">
                     <span class="control-mark"></span>
                     <span class="control-label">Синий</span>
                   </label>
 
                   <label class="control">
-                    <input class="color-input visually-hidden" type="checkbox" value="red" name="red" checked>
+                    <input class="color-input visually-hidden" type="checkbox" value="red" name="red">
                     <span class="control-mark"></span>
                     <span class="control-label">Красный</span>
                   </label>
 
                   <label class="control">
-                    <input class="color-input visually-hidden" type="checkbox" value="pink" name="pink" checked>
+                    <input class="color-input visually-hidden" type="checkbox" value="pink" name="pink">
                     <span class="control-mark"></span>
                     <span class="control-label">Розовый</span>
                   </label>
@@ -214,26 +243,24 @@
               <fieldset class="fieldset-bluetooth">
                 <legend>Bluetooth</legend>
                 <label class="radio-button">
-                  <input class="visually-hidden bluetooth-input" type="radio" name="Bluetooth" value="Есть">
+                  <input class="visually-hidden bluetooth-input" type="radio" name="Bluetooth" value="Есть" checked>
                   <span class="radio-control"></span>
-                  <span>Есть</span>
+                  <span class="radio-span">Есть</span>
                 </label>
                 <label class="radio-button">
-                  <input class="visually-hidden bluetooth-input" type="radio" name="Bluetooth" value="Нет" checked>
+                  <input class="visually-hidden bluetooth-input" type="radio" name="Bluetooth" value="Нет">
                   <span class="radio-control"></span>
-                  <span>Нет</span>
+                  <span class="radio-span">Нет</span>
                 </label>
               </fieldset>
 
 
-              <a class="filters-form-button" href="#">
-                <span>Показать</span></a>
+              <button class="filters-form-button" type="submit"><span>Показать</span></button>
 
             </form>
 
           </div>
           <section class="selfie-catalog">
-
             <h2 class="visually-hidden">Каталог</h2>
 
             <div class="sorting">
@@ -253,11 +280,7 @@
                     <img src="img/up-down.svg" alt="down" width="12" height="10">
                   </button></li>
               </ul>
-
             </div>
-
-
-
 
 
             <div class="selfie-catalog-container ">
@@ -358,13 +381,16 @@
 
         <div class="footer-info-container">
           <address class="footer-address">Санкт-Петербург, набережная <br> реки Карповки, 5, литера П.</address>
-
           <ul class="footer-list">
             <li class="footer-list-item"><a class="footer-items" href="#">Доставка</a></li>
             <li class="footer-list-item"><a class="footer-items" href="#">Гарантия</a></li>
             <li class="footer-list-item"><a class="footer-items" href="#">Контакты</a></li>
           </ul>
-          <a class="footer-tel" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+
+          <div class="footer-tel-container">
+            <a class="footer-tel" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          </div>
+
         </div>
 
         <div class="footer-social-container">
@@ -401,34 +427,28 @@
         </button>
 
 
-
         <form class="delivery-form modal-content" action="https://echo.htmlacademy.ru/." method="post">
           <h2 class="modal-title">Доставка под заказ</h2>
           <div class="authorization">
             <label class="delivery-auth" for="delivery-login">Ваше имя:
-              <span class="auth-form">
-                <input class="delivery-form-field field" type="text" id="delivery-login" name="delivery-login"
-                  placeholder="Введите имя">
-                <img class="login-image" src="img/login.svg" alt="account" width="13" height="12">
-              </span>
+              <input class="delivery-form-field auth-form" type="text" id="delivery-login" name="delivery-login"
+                placeholder="Введите имя">
             </label>
-
 
             <label class="delivery-auth" for="delivery-email">Ваш e-mail:
-              <span class="auth-form">
-                <input class="delivery-form-field field" type="text" id="delivery-email" name="delivery-email"
-                  placeholder="Ваш e-mail:">
-                <img class="email-image" src="img/email.svg" alt="email" width="15" height="12">
-              </span>
+              <input class="delivery-form-email auth-form" type="email" id="delivery-email" name="delivery-email"
+                placeholder="Ваш e-mail:">
+              <span class="email-error">Забавный у вас адрес</span>
             </label>
+
           </div>
 
           <div class="order">
             <label class="delivery-auth" for="delivery-form">Что нужно привезти:
-              <span class="order-form">
-                <input class="delivery-form-field field-order" type="text" id="delivery-form" name="delivery-form"
-                  placeholder="В свободной форме">
-              </span>
+
+              <input class="order-form" type="text" id="delivery-form" name="delivery-form"
+                placeholder="В свободной форме">
+
             </label>
 
             <div class="delivery-auth">
@@ -443,8 +463,8 @@
                     к провозу багажа.</span>
                 </span>
               </span>
-              <span class="count-form">
 
+              <span class="count-form">
                 <button class="min-count" type="button" aria-label="minus">
                   <img src="img/minus.svg" alt="minus" width="16" height="2">
                 </button>
@@ -457,7 +477,6 @@
           </div>
           <button class="delivery-form-button" type="submit"><span>Отправить</span></button>
         </form>
-
       </div>
     </div>
 
